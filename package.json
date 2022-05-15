@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "migration:run": "ts-node-dev ./node_modules/typeorm/cli migration:run -d \"./src/database/index.ts\"",
+    "migration:revert": "ts-node-dev ./node_modules/typeorm/cli migration:revert -d \"./src/database/index.ts\""
   },
   "keywords": [],
   "author": "",
