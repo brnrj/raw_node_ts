@@ -1,9 +1,9 @@
-version: "3.7"
+version: "3.9"
 
 services:
-  database_firstapi:
+  database:
     image: postgres
-    container_name: database_firstapi
+    container_name: database
     restart: always
     ports:
       - 5432:5432
@@ -14,15 +14,17 @@ services:
     volumes:
       - pgdata:/data/postgres
 
-  app:
-    build: .
-    container_name: remtx
-    ports:
-      - 3333:3333
-    links: 
-      - database_firstapi
-    depends_on:
-      - database_firstapi
+  # app:
+  #   build: .
+  #   container_name: remtx
+  #   restart: always
+  #   ports:
+  #     - 3333:3333
+  #     - 9229:9229
+  #   links: 
+  #     - database
+  #   depends_on:
+  #     - database
 
 
 volumes:
