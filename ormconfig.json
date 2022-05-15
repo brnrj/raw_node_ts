@@ -2,7 +2,10 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
-  "username": "",
-  "password": "",
-  "database": "remtx"
+  "username": "docker",
+  "password": "firstapi",
+  "database": "remtx",
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
