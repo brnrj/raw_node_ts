@@ -2,6 +2,7 @@ import "reflect-metadata";
 import express from "express";
 import { createConnection } from "./database/index";
 import swaggerUi from "swagger-ui-express";
+import "./shared/container";
 import "dotenv/config";
 
 import swaggerFile from './swagger.json';
